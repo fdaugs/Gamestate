@@ -15,8 +15,7 @@ public final class EventHandler {
 	
 	static boolean fired_bomb = false; //Sound abgespielt?
 	static boolean fired_ace = false;
-	static int round = 0; //Aktuelle Runde
-	static int roundp = -1; //vorherige Runde
+	static String phase = "";
 	
 	
 	public static void main(String[] args) throws IOException {
@@ -40,11 +39,12 @@ public final class EventHandler {
 		
 		// Reset der Umgebungsvariablen bei Rundenwechsel
 		try {
-			round = o.getJSONObject("map").getInt("round");
-			if (round > roundp) {
+			phase= o.getJSONObject("round").getString("phase");
+			if (phase.equals("over")) {
 				fired_bomb = false;
 				fired_ace = false;
-				roundp = round;
+				System.out.println("reset");
+
 			}
 		} catch (JSONException e1) {
 			
