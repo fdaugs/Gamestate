@@ -2,7 +2,6 @@ package csgoEventSoundPlayer;
 
 import java.io.IOException;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public final class EventHandler {
@@ -11,12 +10,12 @@ public final class EventHandler {
 	
 	private static JSONObject myJSONObject;
 	
-	private static String PFAD = "C:\\Users\\fd\\Desktop\\ACE.wav";
+	private static String PFAD = "E:\\Trojan\\Desktop\\ACE!!.wav";
 	
-	static boolean fired_bomb = false; //Sound abgespielt?
-	static boolean fired_ace = false;
-	static int round = 0; //Aktuelle Runde
-	static int roundp = -1; //vorherige Runde
+	boolean fired_bomb = false; //Sound abgespielt?
+	boolean fired_ace = false;
+	int round = 0; //Aktuelle Runde
+	int roundp = -1; //vorherige Runde
 	
 	
 	public static void main(String[] args) throws IOException {
@@ -38,17 +37,13 @@ public final class EventHandler {
 		
 	
 		
-		// Reset der Umgebungsvariablen bei Rundenwechsel
-		try {
-			round = o.getJSONObject("map").getInt("round");
-			if (round > roundp) {
-				fired_bomb = false;
-				fired_ace = false;
-				roundp = round;
-			}
-		} catch (JSONException e1) {
-			
-		}	
+		
+		round = o.getJSONObject("map").getInt("round");
+		if (round > roundp) {
+			fired_bomb = false;
+			fired_ace = false;
+			roundp = round;
+		}	// Reset der Umgebungsvariablen bei Rundenwechsel
 		
 
 		// Wurde die Bombe geplanted?
@@ -58,7 +53,6 @@ public final class EventHandler {
 
 			if (bomb.equals("planted") && fired_bomb == false) {
 				fired_bomb = true;
-				mySoundHandler.playSound(PFAD);
 			}
 		} catch (Exception e) {
 			System.out.println("keine Bombe");

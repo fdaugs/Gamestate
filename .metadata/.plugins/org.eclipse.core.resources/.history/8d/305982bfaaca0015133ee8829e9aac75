@@ -11,7 +11,7 @@ public final class EventHandler {
 	
 	private static JSONObject myJSONObject;
 	
-	private static String PFAD = "C:\\Users\\fd\\Desktop\\ACE.wav";
+	private static String PFAD = "E:\\Trojan\\Desktop\\ACE!!.wav";
 	
 	static boolean fired_bomb = false; //Sound abgespielt?
 	static boolean fired_ace = false;
@@ -38,7 +38,7 @@ public final class EventHandler {
 		
 	
 		
-		// Reset der Umgebungsvariablen bei Rundenwechsel
+		
 		try {
 			round = o.getJSONObject("map").getInt("round");
 			if (round > roundp) {
@@ -47,8 +47,9 @@ public final class EventHandler {
 				roundp = round;
 			}
 		} catch (JSONException e1) {
-			
-		}	
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}	// Reset der Umgebungsvariablen bei Rundenwechsel
 		
 
 		// Wurde die Bombe geplanted?
@@ -58,7 +59,6 @@ public final class EventHandler {
 
 			if (bomb.equals("planted") && fired_bomb == false) {
 				fired_bomb = true;
-				mySoundHandler.playSound(PFAD);
 			}
 		} catch (Exception e) {
 			System.out.println("keine Bombe");

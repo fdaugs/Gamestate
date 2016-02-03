@@ -58,7 +58,6 @@ public final class EventHandler {
 
 			if (bomb.equals("planted") && fired_bomb == false) {
 				fired_bomb = true;
-				mySoundHandler.playSound(PFAD);
 			}
 		} catch (Exception e) {
 			System.out.println("keine Bombe");
