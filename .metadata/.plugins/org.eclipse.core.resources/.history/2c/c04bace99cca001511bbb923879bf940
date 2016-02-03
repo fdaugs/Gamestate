@@ -22,7 +22,7 @@ public class Get2 {
 		int round = 0; //Aktuelle Runde
 		int roundp =-1; //vorherige Runde
 		
-		final ServerSocket server = new ServerSocket(3001);
+		final ServerSocket server = new ServerSocket(3000);
 		System.out.println("Listening for connection on port 8080 ....");
 		while (true) {
 			try (Socket socket = server.accept()) {
@@ -31,9 +31,9 @@ public class Get2 {
 				socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
 
 				
-				String responseString = new String(getStringFromInputStream(socket.getInputStream()));
-				
-				JSONObject obj = new JSONObject(responseString.substring(responseString.indexOf("{")));
++				String responseString = new String(getStringFromInputStream(socket.getInputStream()));
++				
++				JSONObject obj = new JSONObject(responseString.substring(responseString.indexOf("{")));
 				
 				
 //				Reset der Umgebungsvariablen bei Rundenwechsel

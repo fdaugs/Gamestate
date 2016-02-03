@@ -22,7 +22,7 @@ public class Get2 {
 		int round = 0; //Aktuelle Runde
 		int roundp =-1; //vorherige Runde
 		
-		final ServerSocket server = new ServerSocket(3001);
+		final ServerSocket server = new ServerSocket(3000);
 		System.out.println("Listening for connection on port 8080 ....");
 		while (true) {
 			try (Socket socket = server.accept()) {
