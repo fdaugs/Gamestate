@@ -3,9 +3,9 @@ package eventhandling;
 import javax.sound.sampled.*;
 import java.io.*;
 
-public class Sound2 {
+public class SoundHandler {
 
-	public Sound2() {
+	public SoundHandler() {
 		
 	}
 	
