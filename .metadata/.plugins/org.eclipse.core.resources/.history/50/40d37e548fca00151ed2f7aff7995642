@@ -1,0 +1,9 @@
+package eventhandling;
+
+public class Sound2 {
+
+	public Sound2() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

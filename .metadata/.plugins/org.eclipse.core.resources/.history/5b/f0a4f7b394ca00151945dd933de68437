@@ -1,0 +1,102 @@
+package eventhandling;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Date;
+
+
+
+
+import org.json.*;
+
+public class Get2 {
+
+	public static void main(String[] args) throws Exception {
+		Sound2 player = new Sound2();
+		boolean fired_bomb = false;
+		boolean fired_ace = false;
+		int round = 0;
+		int roundp =-1;
+		
+		final ServerSocket server = new ServerSocket(3000);
+		System.out.println("Listening for connection on port 8080 ....");
+		while (true) {
+			try (Socket socket = server.accept()) {
+				Date today = new Date();
+				String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
+				socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+
+				JSONObject obj = new JSONObject(getStringFromInputStream(
+						socket.getInputStream()).substring(254));
+				try {
+					String bomb = obj.getJSONObject("round").getString("bomb");
+					System.out.println(bomb);
+					
+					if(bomb.equals("planted") && fired_bomb == false){
+						//player.playSound("C:\\Users\\fd\\Desktop\\ACE.wav");	
+						fired_bomb = true;
+					}
+				} catch (Exception e) {
+					System.out.println("keine Bombe");
+				}
+				
+				
+				try {
+					int kills= obj.getJSONObject("player").getJSONObject("state").getInt("round_kills");
+					if(kills==5 && fired_ace == false){
+						player.playSound("C:\\Users\\fd\\Desktop\\ACE.wav");
+						fired_ace = true;
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					
+				}
+				
+				round= obj.getJSONObject("map").getInt("round");
+				if(round>=roundp){
+					
+				}
+				
+				
+
+			}
+
+		}
+	}
+
+	private static String getStringFromInputStream(InputStream is) {
+
+		BufferedReader br = null;
+		StringBuilder sb = new StringBuilder();
+
+		String line;
+		try {
+
+			br = new BufferedReader(new InputStreamReader(is));
+			while ((line = br.readLine()) != null) {
+				sb.append(line);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return sb.toString();
+
+	}
+
+	
+
+}
