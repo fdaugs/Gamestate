@@ -1,4 +1,4 @@
-package eventhandling;
+package csgoEventSoundPlayer;
 
 import javax.sound.sampled.*;
 import java.io.*;

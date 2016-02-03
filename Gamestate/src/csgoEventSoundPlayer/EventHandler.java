@@ -1,4 +1,4 @@
-package eventhandling;
+package csgoEventSoundPlayer;
 
 import java.io.IOException;
 
