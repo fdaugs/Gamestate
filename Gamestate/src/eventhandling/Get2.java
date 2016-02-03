@@ -30,8 +30,10 @@ public class Get2 {
 				String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
 				socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
 
-				JSONObject obj = new JSONObject(getStringFromInputStream(
-						socket.getInputStream()).substring(254));
+				
++				String responseString = new String(getStringFromInputStream(socket.getInputStream()));
++				
++				JSONObject obj = new JSONObject(responseString.substring(responseString.indexOf("{")));
 				
 				
 //				Reset der Umgebungsvariablen bei Rundenwechsel
