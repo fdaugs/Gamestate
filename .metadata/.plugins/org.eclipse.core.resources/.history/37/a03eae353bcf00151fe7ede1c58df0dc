@@ -1,10 +1,9 @@
 package csgoEventSoundPlayer;
+
 import java.io.IOException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-
 
 public final class EventHandler {
 	private static SoundHandler mySoundHandler = new SoundHandler(); // Initialisierung des Players
@@ -77,6 +76,22 @@ public final class EventHandler {
 																				// 44,1kHz)
 				fired_ace = true;
 			}
+		} catch (Exception e) {
+
+		}
+		
+		
+		try {
+			String weapons = o.getJSONObject("player").getJSONObject("weapons").getJSONObject("weapon_2").getString("name");
+			System.out.println(weapons);
+//			if (kills == 5 && fired_ace == false) {
+//				mySoundHandler.playSound(PFAD); // Abspielen
+//																				// des
+//																				// Sounds(16bit
+//																				// wav
+//																				// 44,1kHz)
+//				fired_ace = true;
+//			}
 		} catch (Exception e) {
 
 		}

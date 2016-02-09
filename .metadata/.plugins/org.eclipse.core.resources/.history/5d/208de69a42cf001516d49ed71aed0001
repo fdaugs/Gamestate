@@ -1,0 +1,57 @@
+package csgoEventSoundPlayer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.omg.CORBA.portable.InputStream;
+
+public class JsonConverter {
+
+//Your class here, or you can define it in the constructor
+//Class requestclass = PositionKeeperRequestTest.class;
+
+//Filename
+String jsonFileName;
+
+//constructor
+public JsonConverter (String jsonFileName){
+    this.jsonFileName = jsonFileName;
+}
+
+
+//Returns a json object from an input stream
+private JSONObject getJsonObject(InputStream inputStreamObject){
+
+    //Create input stream
+//    InputStream inputStreamObject = getRequestclass().getResourceAsStream(jsonFileName);
+
+   try {
+       BufferedReader streamReader = new BufferedReader(new InputStreamReader(inputStreamObject, "UTF-8"));
+       StringBuilder responseStrBuilder = new StringBuilder();
+
+       String inputStr;
+       while ((inputStr = streamReader.readLine()) != null)
+           responseStrBuilder.append(inputStr);
+
+       JSONObject jsonObject = new JSONObject(responseStrBuilder.toString());
+
+       //returns the json object
+       return jsonObject;
+
+   } catch (IOException e) {
+       e.printStackTrace();
+   } catch (JSONException e) {
+       e.printStackTrace();
+   }
+
+    //if something went wrong, return null
+    return null;
+}
+
+//private Class getRequestclass(){
+//    return requestclass;
+//}
+}

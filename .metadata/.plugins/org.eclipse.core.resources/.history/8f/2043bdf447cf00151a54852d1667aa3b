@@ -1,21 +1,28 @@
 package csgoEventSoundPlayer;
 
-
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
+
+
+
+
+
+
+
 import org.apache.commons.io.IOUtils;
-import org.json.JSONObject;
-
-
+import org.json.*;
 
 public class GamestateListener {
 
 	private static int PORT = 3001; //Port specified in your cfg
 	public static  ServerSocket listenServer; 
 	private static JSONObject MYJSONOBJ;
-
+	
 	
 	public  GamestateListener() {
 		try {
@@ -35,17 +42,14 @@ public class GamestateListener {
 		System.out.println("Listening for connection on port "+PORT+" ...."); //printing out started listening
 		
 			try (Socket socket = listenServer.accept()) { //wait for connection
-				
-				System.out.println("Start get From Socket           " + System.currentTimeMillis());
-				InputStream mis = socket.getInputStream();
-				System.out.println("Stop get From Socket           " + System.currentTimeMillis());
-				String responseString = IOUtils.toString(mis, "UTF-8"); 
-				System.out.println("Stop to String           " + System.currentTimeMillis());
+
+//				
+				String responseString = IOUtils.toString(socket.getInputStream(), "UTF-8");
 				MYJSONOBJ = new JSONObject(responseString.substring(responseString.indexOf("{")));//split the response string
-				
-			
-				
+//				
 				return MYJSONOBJ;//return the json obj
+				
+
 
 		} catch (Exception e) {
 			MYJSONOBJ = new JSONObject("{ERROR:True}");//create error obj
@@ -58,6 +62,9 @@ public class GamestateListener {
 	
 	
 	
+	
+	
+
 	
 
 }

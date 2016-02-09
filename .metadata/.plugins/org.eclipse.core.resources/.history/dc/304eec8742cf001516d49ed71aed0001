@@ -1,0 +1,9 @@
+package csgoEventSoundPlayer;
+
+public class JsonConverter {
+
+	public JsonConverter() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

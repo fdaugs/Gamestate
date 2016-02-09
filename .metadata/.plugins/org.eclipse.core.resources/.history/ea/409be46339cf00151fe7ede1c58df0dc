@@ -1,10 +1,9 @@
 package csgoEventSoundPlayer;
+
 import java.io.IOException;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-
 
 public final class EventHandler {
 	private static SoundHandler mySoundHandler = new SoundHandler(); // Initialisierung des Players
