@@ -328,3 +328,217 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-08 12:57:02.696 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 12:57:45.178
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 12:57:45.179
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\fd'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-08 17:34:36.592 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 17:34:46.722
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 17:34:46.723
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\fd'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-08 17:36:33.056 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 17:36:40.347
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-08 17:36:40.348
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\fd'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:37:23.417
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:37:23.417
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE Missing requirement: org.eclipse.fx.ide.l10n 2.1.0.201508240705 (org.eclipse.fx.ide.l10n 2.1.0.201508240705) requires 'bundle org.eclipse.equinox.common 3.7.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:37:23.417
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE To: org.eclipse.fx.ide.l10n.feature.feature.group [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:37:23.417
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE From: e(fx)clipse - IDE - l10n support 2.1.0.201508240705 (org.eclipse.fx.ide.l10n.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.417
+!MESSAGE To: org.eclipse.fx.ide.l10n [2.1.0.201508240705]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:37:23.422
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:37:23.422
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE Missing requirement: org.eclipse.fx.ide.l10n 2.1.0.201508240705 (org.eclipse.fx.ide.l10n 2.1.0.201508240705) requires 'bundle org.eclipse.equinox.common 3.7.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:37:23.422
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE To: org.eclipse.fx.ide.l10n.feature.feature.group [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:37:23.422
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE From: e(fx)clipse - IDE - l10n support 2.1.0.201508240705 (org.eclipse.fx.ide.l10n.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:37:23.422
+!MESSAGE To: org.eclipse.fx.ide.l10n [2.1.0.201508240705]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:38:05.006
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:38:05.006
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE Missing requirement: org.eclipse.fx.ide.l10n 2.1.0.201508240705 (org.eclipse.fx.ide.l10n 2.1.0.201508240705) requires 'bundle org.eclipse.equinox.common 3.7.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:05.006
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE To: org.eclipse.fx.ide.l10n.feature.feature.group [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:05.006
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE From: e(fx)clipse - IDE - l10n support 2.1.0.201508240705 (org.eclipse.fx.ide.l10n.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.006
+!MESSAGE To: org.eclipse.fx.ide.l10n [2.1.0.201508240705]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:38:05.007
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:38:05.007
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE Missing requirement: org.eclipse.fx.ide.l10n 2.1.0.201508240705 (org.eclipse.fx.ide.l10n 2.1.0.201508240705) requires 'bundle org.eclipse.equinox.common 3.7.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:05.007
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE To: org.eclipse.fx.ide.l10n.feature.feature.group [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:05.007
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE From: e(fx)clipse - IDE - l10n support 2.1.0.201508240705 (org.eclipse.fx.ide.l10n.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:05.007
+!MESSAGE To: org.eclipse.fx.ide.l10n [2.1.0.201508240705]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:38:35.281
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:38:35.281
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE Missing requirement: Xtext based CSS Tooling 2.1.0.201508240705 (org.eclipse.fx.ide.css 2.1.0.201508240705) requires 'bundle org.eclipse.xtext 2.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:35.281
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE From: e(fx)clipse - IDE - CSS 2.1.0.201508240705 (org.eclipse.fx.ide.css.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE To: org.eclipse.fx.ide.css [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:35.281
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.281
+!MESSAGE To: org.eclipse.fx.ide.css.feature.feature.group [2.1.0.201508240705]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2016-02-08 17:38:35.282
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2016-02-08 17:38:35.282
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE Software being installed: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE Missing requirement: Xtext based CSS Tooling 2.1.0.201508240705 (org.eclipse.fx.ide.css 2.1.0.201508240705) requires 'bundle org.eclipse.xtext 2.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:35.282
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE From: e(fx)clipse - IDE - CSS 2.1.0.201508240705 (org.eclipse.fx.ide.css.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE To: org.eclipse.fx.ide.css [2.1.0.201508240705]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2016-02-08 17:38:35.282
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE From: e(fx)clipse - IDE 2.1.0.201508240705 (org.eclipse.fx.ide.feature.feature.group 2.1.0.201508240705)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2016-02-08 17:38:35.282
+!MESSAGE To: org.eclipse.fx.ide.css.feature.feature.group [2.1.0.201508240705]
+!SESSION 2016-02-09 15:09:20.582 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 15:09:29.707
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-09 15:09:29.739
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\fd'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

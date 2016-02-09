@@ -44,7 +44,6 @@ public final class EventHandler {
 				fired_bomb = false;
 				fired_ace = false;
 				System.out.println("reset");
-
 			}
 		} catch (JSONException e1) {
 			
@@ -69,6 +68,22 @@ public final class EventHandler {
 			int kills = o.getJSONObject("player").getJSONObject("state")
 					.getInt("round_kills");
 			if (kills == 5 && fired_ace == false) {
+				mySoundHandler.playSound(PFAD); // Abspielen
+																				// des
+																				// Sounds(16bit
+																				// wav
+																				// 44,1kHz)
+				fired_ace = true;
+			}
+		} catch (Exception e) {
+
+		}
+		
+		// Hat der Spieler die Bombe?
+		try {
+			String weapon2 = o.getJSONObject("player").getJSONObject("weapons").getJSONObject("weapon_02")
+					.getString("name");
+			if (weapon2.equals("c4")) {
 				mySoundHandler.playSound(PFAD); // Abspielen
 																				// des
 																				// Sounds(16bit
