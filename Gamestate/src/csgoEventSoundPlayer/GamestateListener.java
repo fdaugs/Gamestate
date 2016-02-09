@@ -8,50 +8,87 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Date;
 
-import org.apache.commons.io.IOUtils;
+
+
+
+
 import org.json.*;
 
 public class GamestateListener {
 
-	private static int PORT = 3001; // Port specified in your cfg
-	public static ServerSocket listenServer;
+	private static int PORT = 3001; //Port specified in your cfg
+	public static  ServerSocket listenServer; 
 	private static JSONObject MYJSONOBJ;
-
-	public GamestateListener() {
+	
+	
+	public  GamestateListener() {
 		try {
-			listenServer = new ServerSocket(PORT); // open new Server Socket
-			System.out.println("Started Socket..."); // printing out started
-														// listening
+			listenServer = new ServerSocket(PORT); //open new Server Socket
+			System.out.println("Started Socket..."); //printing out started listening
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
+		} 
+		
 	}
+	
+	
+	public JSONObject listenAndParseJSON() throws IOException{
+		
+		
+		System.out.println("Listening for connection on port "+PORT+" ...."); //printing out started listening
+		
+			try (Socket socket = listenServer.accept()) { //wait for connection
+				Date today = new Date(); //create date for timestamp
+				String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today; //create timestamp var
+				socket.getOutputStream().write(httpResponse.getBytes("UTF-8")); //send timestamp
 
-	public JSONObject listenAndParseJSON() throws IOException {
-
-		System.out
-				.println("Listening for connection on port " + PORT + " ...."); // printing
-																				// out
-																				// started
-																				// listening
-
-		try (Socket socket = listenServer.accept()) { // wait for connection
-
-			//
-			String responseString = IOUtils.toString(socket.getInputStream(),
-					"UTF-8");
-			MYJSONOBJ = new JSONObject(responseString.substring(responseString
-					.indexOf("{")));// split the response string
-			//
-			return MYJSONOBJ;// return the json obj
+				String responseString = new String(getStringFromInputStream(socket.getInputStream()));//parse and save the response
+				
+				
+				MYJSONOBJ = new JSONObject(responseString.substring(responseString.indexOf("{")));//split the response string
+				
+				return MYJSONOBJ;//return the json obj
 
 		} catch (Exception e) {
-			MYJSONOBJ = new JSONObject("{ERROR:True}");// create error obj
-			return MYJSONOBJ;// return it
+			MYJSONOBJ = new JSONObject("{ERROR:True}");//create error obj
+			return MYJSONOBJ;//return it
+		}
+					
+		
+	}
+	
+	
+	
+	private static String getStringFromInputStream(InputStream is) {
+
+		BufferedReader br = null;
+		StringBuilder sb = new StringBuilder();
+
+		String line;
+		try {
+
+			br = new BufferedReader(new InputStreamReader(is));
+			while ((line = br.readLine()) != null) {
+				sb.append(line);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 
+		return sb.toString();
+
 	}
+
+	
 
 }

@@ -79,22 +79,6 @@ public final class EventHandler {
 		} catch (Exception e) {
 
 		}
-		
-		
-		try {
-			String weapons = o.getJSONObject("player").getJSONObject("weapons").getJSONObject("weapon_2").getString("name");
-			System.out.println(weapons);
-			if (weapons.equals("weapon_c4") && fired_ace == false) {
-				mySoundHandler.playSound(PFAD); // Abspielen
-																				// des
-																				// Sounds(16bit
-																				// wav
-																				// 44,1kHz)
-				fired_ace = true;
-			}
-		} catch (Exception e) {
-
-		}
 
 	}
 	
