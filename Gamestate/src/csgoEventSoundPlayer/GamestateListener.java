@@ -11,7 +11,9 @@ import java.util.Date;
 
 
 
+import java.util.Scanner;
 
+import org.apache.commons.io.IOUtils;
 import org.json.*;
 
 public class GamestateListener {
@@ -19,7 +21,7 @@ public class GamestateListener {
 	private static int PORT = 3001; //Port specified in your cfg
 	public static  ServerSocket listenServer; 
 	private static JSONObject MYJSONOBJ;
-	
+
 	
 	public  GamestateListener() {
 		try {
@@ -39,14 +41,15 @@ public class GamestateListener {
 		System.out.println("Listening for connection on port "+PORT+" ...."); //printing out started listening
 		
 			try (Socket socket = listenServer.accept()) { //wait for connection
-				Date today = new Date(); //create date for timestamp
-				String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today; //create timestamp var
-				socket.getOutputStream().write(httpResponse.getBytes("UTF-8")); //send timestamp
-
-				String responseString = new String(getStringFromInputStream(socket.getInputStream()));//parse and save the response
 				
-				
+				System.out.println("Start get From Socket           " + System.currentTimeMillis());
+				InputStream mis = socket.getInputStream();
+				System.out.println("Stop get From Socket           " + System.currentTimeMillis());
+				String responseString = IOUtils.toString(mis, "UTF-8"); 
+				System.out.println("Stop to String           " + System.currentTimeMillis());
 				MYJSONOBJ = new JSONObject(responseString.substring(responseString.indexOf("{")));//split the response string
+				
+			
 				
 				return MYJSONOBJ;//return the json obj
 
@@ -60,35 +63,7 @@ public class GamestateListener {
 	
 	
 	
-	private static String getStringFromInputStream(InputStream is) {
-
-		BufferedReader br = null;
-		StringBuilder sb = new StringBuilder();
-
-		String line;
-		try {
-
-			br = new BufferedReader(new InputStreamReader(is));
-			while ((line = br.readLine()) != null) {
-				sb.append(line);
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (br != null) {
-				try {
-					br.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-
-		return sb.toString();
-
-	}
-
+	
 	
 
 }
