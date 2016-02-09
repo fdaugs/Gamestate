@@ -8,7 +8,7 @@
 		</accessrules>
 	</classpathentry>
 	<classpathentry kind="lib" path="json-20151123.jar"/>
-	<classpathentry kind="lib" path="E:/Trojan/Desktop/commons-net-3.4.jar"/>
-	<classpathentry kind="lib" path="E:/Trojan/Desktop/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="imports/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="imports/json-20151123.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
